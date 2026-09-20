@@ -46,6 +46,13 @@ The selected theme is persisted using Local Storage.
 
 ## 🚀 Features
 
+### 🔐 Authentication & Accounts
+
+- **Multiple Sign-In Options** — Supports Google Sign-In and standard Email/Password authentication.
+- **Session Persistence** — Includes a "Remember Me" toggle to stay logged in across sessions.
+- **Data Privacy** — Tasks, notes, and progress are securely scoped to individual user accounts, ensuring private planner state.
+- **Legacy Migration** — Automatically migrates pre-login local data to user-scoped accounts upon first sign-in.
+
 ### 📅 Core Planning
 
 - **Dynamic data model** — tasks, dates, categories, difficulty, priority, tips, warnings, scheduling information, and timeline milestones are loaded from `roadmap.json`
@@ -378,7 +385,6 @@ Potential future enhancements include:
 
 - Cloud synchronization
 - Cross-device persistence
-- Firebase or Supabase integration
 - Native PDF generation
 - Recurring task templates
 - Multiple roadmap support
@@ -389,7 +395,6 @@ Potential future enhancements include:
 - Study-group functionality
 - Advanced analytics
 - Optional chart-library integration
-- User accounts and authentication
 - Automated testing
 
 ---
