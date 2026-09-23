@@ -251,11 +251,21 @@ function renderUserMenu(user){
 
   const avatarBtn = document.getElementById("userAvatarBtn");
   const dropdown = document.getElementById("userMenuDropdown");
+  
   avatarBtn.addEventListener("click", (e)=>{
     e.stopPropagation();
     dropdown.classList.toggle("open");
   });
+  
   document.addEventListener("click", ()=> dropdown.classList.remove("open"));
+
+  // NEW: Add keyboard event listener for the Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && dropdown.classList.contains("open")) {
+      dropdown.classList.remove("open");
+      avatarBtn.focus(); // Best practice: return focus to the toggle button
+    }
+  });
 
   document.getElementById("signOutBtn").addEventListener("click", async ()=>{
     // A full reload after sign-out (rather than trying to "reset" in place)
